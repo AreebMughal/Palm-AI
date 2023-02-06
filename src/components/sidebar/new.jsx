@@ -4,6 +4,7 @@ import MenuItem from './menuItem';
 import Sidebar from './sidebar';
 import Search from './../../pages/search/Search';
 import Explore from 'pages/search/components/explore';
+import Process from 'pages/process/process';
 
 export default function New() {
 
@@ -177,8 +178,9 @@ export default function New() {
                             {/* <div class="w-full h-full rounded border-dashed border-2 border-gray-300"> */}
                             {/* <Search /> */}
 
-                            <Search />
+                            {/* <Search /> */}
                             {/* <Explore /> */}
+                            <Process />
                             {/* </div> */}
                         </div>
                     </div>
