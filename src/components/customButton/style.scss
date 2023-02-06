@@ -1,0 +1,34 @@
+.btn {
+    cursor: pointer;
+}
+
+.default_button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 12px;
+    gap: 10px;
+
+    // width: 224px;
+    height: 44px;
+
+    /* Primary */
+    background: #00ce7c;
+    border-radius: 5px;
+}
+
+.default_button_text {
+    width: 90px;
+    height: 16px;
+
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+
+    /* Shades/White */
+
+    color: #ffffff;
+}

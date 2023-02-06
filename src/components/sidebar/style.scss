@@ -1,0 +1,169 @@
+// $sidebar_width: 272px;
+.sidebar {
+    /* Side Bar */
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    padding: 24px;
+    gap: 24px;
+
+    /* Shades/White */
+    // background: #ffffff;
+    background-color: #ddddff;
+    border-radius: 4px;
+    // width: $sidebar_width;
+    max-width: 272px;
+    // min-width: 272px;
+    // max-width: fit-content;
+    // border-right: 1px solid gray;
+    ._logo {
+        /* Logo */
+
+        /* Auto layout */
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+        gap: 8px;
+        // width: 224px;
+        height: 64px;
+
+        /* Inside auto layout */
+
+        // flex: none;
+        // order: 0;
+        // align-self: stretch;
+        // flex-grow: 0;
+        ._img {
+            width: 144px;
+            height: 22px;
+        }
+    }
+}
+
+.menu {
+    /* Title */
+
+    // width: 224px;
+    height: 22px;
+
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    /* identical to box height */
+
+    /* Neutral / 500 */
+
+    color: #64748b;
+}
+
+.menu_item {
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px 12px;
+    gap: 8px;
+
+    // width: 224px;
+    height: 38px;
+
+    ._text {
+        width: 172px;
+        height: 22px;
+
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        display: flex;
+        align-items: center;
+
+        /* Secondary */
+
+        color: #1d1d31;
+
+        /* Inside auto layout */
+    }
+}
+
+.badge_counter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 8px;
+    gap: 8px;
+
+    width: 30px;
+    height: 18px;
+
+    background: #00ce7c;
+    border-radius: 4px;
+}
+
+.badge_text {
+    // width: 14px;
+    // height: 18px;
+
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    /* Shades/White */
+
+    color: #ffffff;
+}
+
+.divider {
+    width: 110%;
+    margin-left: -10px;
+    height: 0px;
+    /* Neutral / 200 */
+    border: 1px solid #d0d5dd;
+}
+
+.sidebar_logout {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 8px;
+    gap: 4px;
+
+    // width: 224px;
+    height: 32px;
+
+    /* Neutral / 50 */
+
+    background: #f7f8f9;
+    border-radius: 4px;
+}
+
+.sidebar_logout_text {
+    width: 55px;
+    height: 19px;
+
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    /* identical to box height */
+
+    /* Secondary */
+
+    color: #1d1d31;
+}

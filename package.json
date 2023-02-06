@@ -3,12 +3,20 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fontsource/manrope": "^4.5.13",
+    "@fontsource/roboto": "^4.5.8",
+    "@headlessui/react": "^1.7.8",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "multiselect-react-dropdown": "^2.0.25",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-multi-select-component": "^4.3.4",
+    "react-router-dom": "^6.8.0",
     "react-scripts": "5.0.1",
+    "react-tailwindcss-select": "^1.6.0",
+    "sass": "^1.57.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -34,5 +42,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.2.4"
   }
 }
