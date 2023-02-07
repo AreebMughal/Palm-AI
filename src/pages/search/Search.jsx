@@ -8,6 +8,7 @@ import DatasetMultiSelect from './components/MultiSelect';
 import Multi from './components/multi';
 import PageHeader from 'components/page_header/pageHeader';
 import Explore from './components/explore';
+import Outcome from './components/outcome';
 
 const Search = () => {
     const [suggestedDataset, setSuggestedDataset] = useState([]);
@@ -61,6 +62,9 @@ const Search = () => {
                         </div>
                     </div>
                 </div>
+                <Header title='Outcome Required' />
+                <Outcome />
+
                 {/* <div onChange={ }>
                 <input type="radio" value="MALE" name="gender" /> Male
                 <input type="radio" value="FEMALE" name="gender" /> Female

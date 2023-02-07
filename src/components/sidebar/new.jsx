@@ -178,9 +178,9 @@ export default function New() {
                             {/* <div class="w-full h-full rounded border-dashed border-2 border-gray-300"> */}
                             {/* <Search /> */}
 
-                            {/* <Search /> */}
+                            <Search />
                             {/* <Explore /> */}
-                            <Process />
+                            {/* <Process /> */}
                             {/* </div> */}
                         </div>
                     </div>
