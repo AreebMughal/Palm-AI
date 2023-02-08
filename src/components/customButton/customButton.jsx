@@ -1,13 +1,15 @@
 import React from 'react';
 import './style.scss';
 
-const CustomButton = (props) => {
+const CustomButton = ({ btnClass, onClick, ...props }) => {
     return (
         <div
-            className={props.class || 'btn default_button'}
+            className={`default_button default_button_text ${btnClass}`}
             onClick={props.onClick}
         >
+            {/* <span className='default_button_text'> */}
             {props.children}
+            {/* </span> */}
         </div>
     );
 }

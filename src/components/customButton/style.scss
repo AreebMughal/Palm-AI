@@ -1,8 +1,5 @@
-.btn {
-    cursor: pointer;
-}
-
 .default_button {
+    cursor: pointer;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -19,8 +16,8 @@
 }
 
 .default_button_text {
-    width: 90px;
-    height: 16px;
+    // width: 150px;
+    // height: 16px;
 
     font-family: "Roboto";
     font-style: normal;
@@ -29,6 +26,5 @@
     line-height: 16px;
 
     /* Shades/White */
-
     color: #ffffff;
 }

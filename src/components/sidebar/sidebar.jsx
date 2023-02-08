@@ -24,9 +24,9 @@ const Sidebar = () => {
             </div>
             <CustomButton >
                 <img src={IconPlus} alt='plus icon' />
-                <span className='default_button_text'>
-                    New Research
-                </span>
+                {/* <span className='default_button_text'> */}
+                New Research
+                {/* </span> */}
             </CustomButton>
             <div className='menu'>
                 Menu

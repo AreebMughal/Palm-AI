@@ -8,7 +8,7 @@ const Card = (props) => {
     return (
         <div className={classes} >
             <div className='h-full w-full m-auto flex align-middle items-center pl-3'>
-                <div className=' ml-3'>
+                <div className={`ml-3 ${props.textClass}`}>
                     {props.title}
                 </div>
             </div>

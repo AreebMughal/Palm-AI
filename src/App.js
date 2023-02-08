@@ -6,6 +6,7 @@ import { useRef } from 'react';
 import New from 'components/sidebar/new';
 import Nw from 'components/sidebar/nw';
 
+// import 'antd/dist/antd.css';
 
 function App() {
   const sideRef = useRef();

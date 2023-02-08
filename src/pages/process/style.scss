@@ -1,193 +1,196 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:700);
-
-// -- vars
-$bg-color: #34495e;
-$default-size: 1em;
-$label-font-size: $default-size / 4;
-$label-font-size-redo: $default-size * 4;
-
-// -- mixins
-@mixin size($width, $height) {
-  height: $height;
-  width: $width;
-}
-
-@mixin draw-progress($progress, $color) {
-  .pie {
-    .half-circle {
-      border-color: $color;
-    }
-
-    .left-side {
-      transform: rotate($progress * 3.6deg);
-    }
-
-    @if $progress <= 1 {
-      .right-side {
-        display: none;
-      }
-    } @else {
-      clip: rect(auto, auto, auto, auto);
-
-      .right-side {
-        transform: rotate(180deg);
-      }
-    }
-  }
-}
-
-@mixin draw-progress--solid($progress, $color, $bg-color) {
-  background: linear-gradient(to right, $color 50%, $bg-color 50%);
-
-  &:before {
-    @if $progress <= 50 {
-      background: $bg-color;
-      transform: rotate((100 - (50 - $progress)) / 100 * 360deg * -1);
-    } @else {
-      background: $color;
-      transform: rotate((100 - $progress) / 100 * 360deg);
-    }
-  }
-}
-
-// -- selectors
-*,
-*:before,
-*:after {
+.process-main-card {
   box-sizing: border-box;
+
+  // position: absolute;
+  max-width: 740px;
+  // height: 675px;
+  min-height: 400px;
+  // left: 296px;
+  // top: 266px;
+  border: 1px solid #dfe3e8;
+  border-radius: 8px;
 }
 
-.set-size {
-  font-size: 10em;
-}
+.process-side-card {
+  // position: absolute;
+  // min-width: 340px;
+  height: 675px;
+  // left: 1056px;
+  // top: 266px;
 
-.charts-container {
-  &:after {
-    clear: both;
-    content: "";
-    display: table;
-  }
-}
+  background: #ffffff;
+  box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  ._option {
+    box-sizing: border-box;
 
-.pie-wrapper {
-  @include size($default-size, $default-size);
-  float: left;
-  margin: 15px;
-  position: relative;
+    // position: absolute;
+    // width: 310px;
+    height: 56px;
+    // left: 20px;
+    // top: 71px;
 
-  &:nth-child(3n + 1) {
-    clear: both;
-  }
+    background: #ffffff;
+    border: 1px solid #dfe3e8;
+    border-radius: 5px;
 
-  .pie {
-    @include size(100%, 100%);
-    clip: rect(0, $default-size, $default-size, $default-size / 2);
-    left: 0;
-    position: absolute;
-    top: 0;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height, or 125% */
 
-    .half-circle {
-      @include size(100%, 100%);
-      border: ($default-size / 10) solid #3498db;
-      border-radius: 50%;
-      clip: rect(0, $default-size / 2, $default-size, 0);
-      left: 0;
-      position: absolute;
-      top: 0;
-    }
-  }
+    /* Purple */
 
-  .label {
-    background: $bg-color;
-    border-radius: 50%;
-    bottom: $label-font-size-redo / 10;
-    color: #ecf0f1;
-    cursor: default;
-    display: block;
-    font-size: $label-font-size;
-    left: $label-font-size-redo / 10;
-    line-height: $label-font-size-redo * 0.7;
-    position: absolute;
-    right: $label-font-size-redo / 10;
-    text-align: center;
-    top: $label-font-size-redo / 10;
-
-    .smaller {
-      color: #bdc3c7;
-      font-size: 0.45em;
-      padding-bottom: 20px;
-      vertical-align: super;
-    }
-  }
-
-  .shadow {
-    @include size(100%, 100%);
-    border: $default-size / 10 solid #bdc3c7;
-    border-radius: 50%;
-  }
-
-  &.style-2 {
-    .label {
-      background: none;
-      color: #7f8c8d;
-
-      .smaller {
-        color: #bdc3c7;
-      }
-    }
-  }
-
-  &.progress-30 {
-    @include draw-progress(30, #3498db);
-  }
-
-  &.progress-60 {
-    @include draw-progress(60, #9b59b6);
-  }
-
-  &.progress-90 {
-    @include draw-progress(90, #e67e22);
-  }
-
-  &.progress-45 {
-    @include draw-progress(45, #1abc9c);
-  }
-
-  &.progress-75 {
-    @include draw-progress(75, #8e44ad);
-  }
-
-  &.progress-95 {
-    @include draw-progress(95, #e74c3c);
+    color: #5a21ec;
   }
 }
 
-.pie-wrapper--solid {
+.side_header {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  /* or 150% */
+
+  text-transform: capitalize;
+
+  /* Secondary */
+
+  color: #1d1d31;
+}
+
+.progress-text {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 9.9px;
+  line-height: 15px;
+  color: #667085;
+}
+
+.progress-percent {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 19.8px;
+  line-height: 26px;
+  color: #1d1d31;
+}
+
+.step-info {
+  font-family: "Roboto";
+  font-style: italic;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+
+  color: #7a7a7a;
+}
+
+.indexedStep {
+  color: rgb(190, 190, 190);
+  width: 15px;
+  height: 15px;
+  font-size: 12px;
+  background-color: rgb(255, 255, 255);
   border-radius: 50%;
-  overflow: hidden;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(206, 206, 206);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
 
-  &:before {
-    border-radius: 0 100% 100% 0 / 50%;
-    content: "";
-    display: block;
-    height: 100%;
-    margin-left: 50%;
-    transform-origin: left;
-  }
+.indexedStep.accomplished {
+  background-color: #664de5;
+  color: white;
+  border-style: none;
+}
 
-  .label {
-    background: transparent;
-  }
+.RSPBprogressBar {
+  height: 7px;
+  // width: 30%;
+  line-height: 1;
+  border-radius: 10px;
+  position: relative;
+  background-color: rgb(207, 207, 207);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 0;
+  // margin: 20px auto;
+}
 
-  &.progress-65 {
-    @include draw-progress--solid(65, #e67e22, $bg-color);
-  }
+.RSPBprogressBar .RSPBstep {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+  position: absolute;
+  transform: translateX(-50%);
+  transition-property: all;
+  transition-timing-function: ease;
+}
 
-  &.progress-25 {
-    @include draw-progress--solid(25, #9b59b6, $bg-color);
-  }
+.RSPBprogressBar .RSPBprogressBarText {
+  color: white;
+  font-size: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
-  &.progress-88 {
-    @include draw-progress--solid(88, #3498db, $bg-color);
+.RSPBprogressBar .RSPBprogression {
+  position: absolute;
+  transition: width 0.3s ease;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 10px;
+  background: #664de5;
+  z-index: -1;
+}
+
+@media screen and (max-width: 480px) {
+  .indexedStep {
+    width: 15px;
+    height: 15px;
+    font-size: 6px;
   }
+}
+
+.progress-text {
+  // width: 353.33px;
+  height: 14px;
+  margin-top: 0.6rem;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  /* identical to box height */
+
+  text-align: center;
+  text-transform: uppercase;
+
+  /* Secondary */
+
+  color: #1d1d31;
+}
+
+.progressbar {
+  height: 30px;
+}
+
+.process-sidebar-btn {
+  background: #ffffff;
+  border: 1px solid #5a21ec;
+  color: #5a21ec;
 }

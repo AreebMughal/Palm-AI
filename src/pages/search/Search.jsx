@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Card from './components/customCard';
+import Card from '../../components/card/customCard';
 import Header from 'components/page_header/header';
 import SearchBar from 'components/customSearchbar/searchBar';
 import './style.scss';

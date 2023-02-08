@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.scss';
 import "@fontsource/roboto";
 import "@fontsource/manrope";
+import "@fontsource/inter";
 
 import App from './App';
 
