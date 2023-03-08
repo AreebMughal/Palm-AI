@@ -1,6 +1,7 @@
-import { Button, message, Steps, theme } from 'antd';
+import { Button, message } from 'antd';
 import { useState } from 'react';
 import CircleProgressbar from './circleProgressbar';
+import FileViewer from './fileViewer';
 import MultiStepProgressBar from './multiStepProgressBar';
 import StepSidebar from './stepSidebar';
 
@@ -12,7 +13,7 @@ const steps = [
     },
     {
         title: 'Evaluate',
-        content: 'Second-content',
+        content: <FileViewer />,
         stepInfo: 'Completed'
     },
     {
@@ -36,7 +37,7 @@ const Step = () => {
             <div className='step-info mt-3 mb-2'>{steps[current].stepInfo}</div>
             <MultiStepProgressBar page={current} />
             <div className='my-2 grid grid-cols-12'>
-                <div className='process-main-card flex justify-center items-center mt-3 mr-3 col-span-8 '>
+                <div className='process-main-card mt-3 mr-3 col-span-8 '>
                     {steps[current].content}
                 </div>
                 <div className='process-side-card py-0 px-4 mt-3 col-span-4 max-md:col-span-8 max-sm:col-span-8'>

@@ -11,6 +11,37 @@
   border-radius: 8px;
 }
 
+.file-viewer-bar {
+  height: 45px;
+  background: #ffffff;
+  border-bottom: 1px solid #dfe3e8;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+.file-viewer-txt {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 28px;
+  /* identical to box height, or 233% */
+
+  text-transform: capitalize;
+
+  color: #686868;
+}
+
+.file-viewer-btn {
+  background: #5a21ec;
+  height: 31px;
+  width: 76px;
+  border-radius: 3px;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+}
 .process-side-card {
   // position: absolute;
   // min-width: 340px;

@@ -9,7 +9,7 @@ const options = [
     { id: 2, title: 'Mergers and Aquisitions' },
 ];
 const StepSidebar = ({ step, ...props }) => {
-    console.log(step);
+
     return (
         <>
             {step === 'Train' &&

@@ -7,6 +7,7 @@ import New from 'components/sidebar/new';
 import Nw from 'components/sidebar/nw';
 
 // import 'antd/dist/antd.css';
+import Output from './pages/output/output';
 
 function App() {
   const sideRef = useRef();
@@ -24,7 +25,10 @@ function App() {
       <PageHeader
         title="Search"
       /> */}
-      <New />
+
+      {/* <New /> */}
+      <Output />
+
       {/* <Nw /> */}
       {/* <div className='grid grid-cols-11'>
         <span className='hambuger hidden max-md:flex max-md:col-span-11 '>
